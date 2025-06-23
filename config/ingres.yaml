@@ -1,0 +1,16 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: kuber-ingress
+spec:
+  rules:
+  - host: arch.homework
+    http:
+      paths:
+      - path: /health
+        pathType: Prefix
+        backend:
+          service:
+            name: otus-min-app-svc
+            port:
+              number: 80
