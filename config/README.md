@@ -6,6 +6,10 @@ http://arch.homework/health
 
 ### Заметки для себя
 
+Если не прописать в /etc/hosts
+172.17.0.2	arch.homework
+То правило ingress не пропустит запрос по ip.
+
 ### Команды
 
 Запускаем миникуб, если он не был запущен ранее
@@ -82,4 +86,12 @@ curl http://<cluster-ip>:8000
 
 ```shell
 kubectl get po -A -o wide
+```
+
+```shell
+kubectl get po --show-labels
+```
+
+```shell
+kubectl exec -it otus-min-app-dp-5b98d96b78-ds6jr -- /bin/bash
 ```

@@ -7,7 +7,6 @@ spec:
     env: otus-min-app
   ports:
     - protocol: TCP
-      name: http
       port: 80
       targetPort: 8000
   type: ClusterIP
